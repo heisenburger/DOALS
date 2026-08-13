@@ -1,0 +1,17 @@
+@use "mixins" as *;
+@use "vars" as *;
+
+// Flipthrough gif
+
+#flipthrough {
+  width: 100%;
+  max-width: $col1;
+  aspect-ratio: 3/4.5;
+  object-fit: cover;
+  object-position: top;
+}
+
+// Specs list
+li {
+  margin: 1em 0;
+}

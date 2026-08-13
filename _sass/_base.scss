@@ -38,7 +38,7 @@ body {
 }
 
 a {
-  color: var(--ac);
+  color: var(--fg);
   @include transit();
   &:hover {
     color: var(--fg);

@@ -1,0 +1,38 @@
+@use "mixins" as *;
+@use "vars" as *;
+
+@include query($bp-med){
+  main {
+    display: grid;
+    grid-template-columns: auto var(--col1) var(--col2) auto;
+    gap: var(--gap-lrg);
+  }
+
+  #flipthrough {
+    grid-column-start: 2;
+  }
+
+  #intro {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    align-self: center;
+  }
+
+    #title {
+      transform: translateX(-40px);
+    }
+
+  .body {
+    grid-column-start: 3;
+  }
+
+  img.bleed-left {
+    grid-column: span 3 / span 3;
+    width: 100%;
+  }
+}
+
+header, footer {
+  text-align: center;
+  padding: var(--gap-lrg) 0;
+}

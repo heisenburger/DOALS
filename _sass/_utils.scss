@@ -4,71 +4,10 @@
 @use "mixins" as *;
 @use "vars" as *;
 
-// ----------
-// Typography
-// ----------
-
-.rbr { // responsive line break
-  display: none;
-  @include query($bp-med) {
-    display: inline;
-  }
+// Lists
+.nls {
+  list-style: none;
 }
-
-.sideways {
-  display: inline-block;
-  padding: var(--10) 0;
-  @include query($bp-med){
-    transform: rotate(-90deg) translateX(-100%) translateY(-0.25em);
-    transform-origin: 0 0;
-    padding: 0 var(--10);
-    white-space: nowrap;
-  }
-}
-
-.inline-icon {
-  position: relative;
-  top: -0.05em;
-  fill: currentColor;
-  width: 0.8em;
-  height: 0.8em;
-  color: currentColor;
-}
-
-// ------
-// Visual
-// ------
-
-.visual-hide { // hide visually but show to screen readers
-  clip: rect(0 0 0 0); 
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap; 
-  width: 1px;
-}
-
-// ------
-// Layout
-// ------
-
-// Grid
-
-  .grid {
-    display: block;
-    @include query($bp-sml){
-      display: grid;
-      justify-content: space-between; 
-    }
-  }
-
-  .grid-child {
-    width: 100%;
-    @include query-down($bp-sml){
-      margin: var(--20) 0;
-    }
-  }
 
 // Flex
 
@@ -88,7 +27,7 @@
     flex-direction: column;
   }
 
-  @include query($bp-lrg){
+  @include query($bp-med){
     .flex-row {
       flex-direction: row;
     }

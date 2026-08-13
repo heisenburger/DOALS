@@ -8,39 +8,22 @@
 // Sizes
 // -----
 
+  $col1: 360px;
+  $col2: 540px;
+  $gap-sml: 20px;
+  $gap-lrg: 48px;
+
+:root {
+  --col1: #{$col1};
+  --col2: #{$col2};
+  --gap-sml: #{$gap-sml};
+  --gap-lrg: #{$gap-lrg};
+}
+
 // Breakpoints
 
   $bp-sml: 340px;
-  $bp-med: 680px;
-  $bp-lrg: 960px;
-  $bp-xlg: 1280px;
-  $bp-xxl: 1600px;
-  $bp-2k:  2000px;
-
-// Misc. sizes
-
-:root {
-  --4:   0.25rem;
-  --8:    0.5rem;
-  --10: 0.625rem;
-  --11: 0.688rem;
-  --12:  0.75rem;
-  --14: 0.875rem;
-  --16:     1rem;
-  --20:  1.25rem;
-  --22: 1.375rem;
-  --24:   1.5rem;
-  --28:  1.75rem;
-  --32:     2rem;
-  --36:  2.25rem;
-  --40:   2.5rem;
-  --48:     3rem;
-  --56:   3.5rem;
-  --64:     4rem;
-  --72:   4.5rem;
-  --96:     6rem;
-  --128:    8rem;
-}
+  $bp-med: calc(3*#{$gap-lrg} + #{$col1} + #{$col2});
 
 // -------
 // Colours
@@ -67,6 +50,13 @@
 // ----------
 // Typography
 // ----------
+
+// Font sizes
+
+  :root {
+    --f-sml: 0.875rem;
+    --f-lrg: 1.5rem;
+  }
 
 // Font families
 

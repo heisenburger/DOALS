@@ -1,0 +1,16 @@
+@use "mixins" as *;
+@use "vars" as *;
+
+p, li {
+  font-size: var(--f-sml);
+  line-height: 2em;
+}
+p.body {
+  text-align: justify;
+}
+
+header, footer {
+  font-size: var(--f-lrg);
+  font-weight: bold;
+  letter-spacing: 10%;
+}
