@@ -4,11 +4,13 @@
 
 @charset "utf-8";
 
+// Import font-face declarations
+@use "fonts" as *;
+
 // Import partials
 @use "utils" as *;
 @use "base" as *;
+@use "typography" as *;
 @use "layouts" as *;
 @use "components" as *;
 @use "animations" as *;
-
-// Import 3rd party

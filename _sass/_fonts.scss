@@ -1,0 +1,32 @@
+// book
+@font-face {
+  font-family: 'Standard';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/standard-book-webfont.woff2');
+}
+// book italic
+@font-face {
+  font-family: 'Standard';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/standard-book-italic-webfont.woff2');
+}
+// bold
+@font-face {
+  font-family: 'Standard';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/standard-bold-webfont.woff2');
+}
+// bold italic
+@font-face {
+  font-family: 'Standard';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/standard-bold-italic-webfont.woff2');
+}
