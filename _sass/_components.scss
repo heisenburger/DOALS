@@ -3,12 +3,38 @@
 
 // Flipthrough gif
 
+h1 {
+  filter: invert(1);
+  mix-blend-mode: difference;
+}
+
 #flipthrough {
   width: 100%;
   max-width: $col1;
   aspect-ratio: 3/4.5;
   object-fit: cover;
   object-position: top;
+}
+
+input, button {
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid var(--fg);
+}
+
+input {
+  padding-left: 1rem;
+}
+
+button {
+  @include wipe-hover;
+  padding: 0.75rem 1rem;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    transform: translate(1px, 2px);
+  }
 }
 
 // Specs list

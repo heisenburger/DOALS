@@ -16,10 +16,17 @@
     grid-column: span 2 / span 2;
     grid-column-start: 3;
     align-self: center;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    p, form {
+      grid-column-start: 1;
+    }
   }
 
     #title {
       transform: translateX(-40px);
+      grid-column: span 2;
     }
 
   .body {
@@ -35,4 +42,11 @@
 header, footer {
   text-align: center;
   padding: var(--gap-lrg) 0;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: calc(2*var(--gap-lrg));
 }

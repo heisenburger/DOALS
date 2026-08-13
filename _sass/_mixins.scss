@@ -90,3 +90,31 @@
 @mixin anchor-position {
   position: relative;
 }
+
+@mixin wipe-hover($background: var(--fg), $foreground: var(--bg)) {
+  @include anchor-position;
+  &::after {
+    @include pseudo;
+    display: inline-block;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    background: $background;
+  }
+  &:hover, &:focus {
+    &::after {
+      width: 100%;
+      @include transit;
+    }
+  }
+  &:hover {
+    color: $foreground;
+    &::after {
+      background: $background;
+    }
+  }
+  &:focus {
+    color: $foreground;
+    box-shadow: none;
+  }
+}

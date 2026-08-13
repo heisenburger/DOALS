@@ -42,7 +42,7 @@
 
   @include dark { :root {
     --fg: white;
-    --bg: black;
+    --bg: #111;
     --ac: lightblue; // accent colour
     --fc: yellow; // focus colour
   }}
@@ -55,7 +55,9 @@
 
   :root {
     --f-sml: 0.875rem;
-    --f-lrg: 1.5rem;
+    --f-med: 1rem;
+    --f-lrg: 1.25rem;
+    --f-xlg: 1.5rem
   }
 
 // Font families

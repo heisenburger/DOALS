@@ -1,6 +1,16 @@
 @use "mixins" as *;
 @use "vars" as *;
 
+#intro {
+  font-size: var(--f-med);
+}
+
+input, button {
+  font-family: var(--ff-sans);
+  font-size: var(--f-med);
+  text-align: center;
+}
+
 p, li {
   font-size: var(--f-sml);
   line-height: 2em;
@@ -10,7 +20,7 @@ p.body {
 }
 
 header, footer {
-  font-size: var(--f-lrg);
+  font-size: var(--f-xlg);
   font-weight: bold;
-  letter-spacing: 10%;
+  letter-spacing: 20%;
 }
