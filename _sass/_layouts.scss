@@ -26,7 +26,7 @@ h1#title {
   margin: var(--gap-lrg) 0;
 }
 
-  #title-diary, #title-of {
+  #title-diaryof {
     height: calc(var(--multiplier) * var(--height-1));
   }
   #title-a {
@@ -51,7 +51,7 @@ h1#title {
     grid-template-columns: auto 1fr 2fr auto;
     column-gap: var(--gap-lrg);
     row-gap: 0;
-    // place-self: center;
+    padding: 0;
   }
 
   #flipthrough {

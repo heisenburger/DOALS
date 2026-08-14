@@ -8,6 +8,12 @@ h1 {
   mix-blend-mode: difference;
 }
 
+@include dark {
+  h1#title img{
+    filter: contrast(2);
+  }
+}
+
 #flipthrough {
   width: 100%;
   max-width: $col1;
@@ -20,6 +26,7 @@ input, button {
   border-radius: 0;
   background: transparent;
   border: 1px solid var(--fg);
+  color: var(--fg);
 }
 
 input {

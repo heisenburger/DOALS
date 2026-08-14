@@ -51,9 +51,7 @@
 
   @include dark { :root {
     --fg: white;
-    --bg: #111;
-    --ac: lightblue; // accent colour
-    --fc: yellow; // focus colour
+    --bg: #333;
   }}
 
 // ----------
