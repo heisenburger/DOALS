@@ -45,13 +45,14 @@
   :root {
     --fg: black;
     --bg: white;
-    --ac: white; // accent colour
+    --ac: black; // accent colour
     --fc: yellow; // focus colour
   }
 
   @include dark { :root {
     --fg: white;
     --bg: #2c2c2c;
+    --ac: white;
   }}
 
 // ----------

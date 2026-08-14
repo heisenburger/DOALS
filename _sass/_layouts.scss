@@ -6,6 +6,10 @@ header, footer {
   padding: var(--gap-lrg) 0;
 }
 
+footer {
+  margin-top: var(--gap-lrg);
+}
+
 main {
   text-align: center;  // mostly for block elements like imgs
   padding: 0 var(--gap-sml);
