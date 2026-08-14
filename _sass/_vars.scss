@@ -8,10 +8,10 @@
 // Sizes
 // -----
 
-  $col1: 360px;
-  $col2: 540px;
-  $gap-sml: 20px;
-  $gap-lrg: 48px;
+  $col1: 22.5rem;
+  $col2: 33.75rem;
+  $gap-sml: 1.25rem;
+  $gap-lrg: 3rem;
 
 :root {
   --col1: #{$col1};
@@ -20,10 +20,19 @@
   --gap-lrg: #{$gap-lrg};
 }
 
+#title {
+  --height-1: 9.5rem; //152px
+  --height-2: 2.5rem; //40px
+  --height-3: 7.875rem; //126px
+}
+
 // Breakpoints
 
   $bp-sml: 340px;
   $bp-med: calc(3*#{$gap-lrg} + #{$col1} + #{$col2});
+  $bp-lrg: 1120px;
+  $bp-xlg: 1680px;
+  $bp-2xl: 2240px;
 
 // -------
 // Colours
