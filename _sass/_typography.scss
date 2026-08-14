@@ -12,6 +12,7 @@ input, button {
 }
 
 p, li {
+  text-align: left;
   font-size: var(--f-sml);
   line-height: 2.25em;
 }
@@ -23,4 +24,11 @@ header, footer {
   font-size: var(--f-xlg);
   font-weight: bold;
   letter-spacing: 30%;
+}
+
+a#self-link {
+  text-decoration: none;
+  &:hover {
+    color: var(--ac);
+  }
 }
