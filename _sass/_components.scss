@@ -3,14 +3,20 @@
 
 // Flipthrough gif
 
-h1 {
-  filter: invert(1);
-  mix-blend-mode: difference;
-}
+// h1 {
+//   filter: invert(1);
+//   mix-blend-mode: difference;
+// }
+
+// @include dark {
+//   h1#title img{
+//     filter: contrast(2);
+//   }
+// }
 
 @include dark {
-  h1#title img{
-    filter: contrast(2);
+  h1 {
+    filter: invert(1) contrast(1);
   }
 }
 

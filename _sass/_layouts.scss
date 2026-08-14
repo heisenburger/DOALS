@@ -11,12 +11,12 @@ main {
   padding: 0 var(--gap-sml);
 }
 
-form#order-form {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 3.25rem 0 var(--gap-sml);
-}
+// form#order-form {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   margin: 3.25rem 0 var(--gap-sml);
+// }
 
 h1#title {
   --multiplier: 1;
@@ -37,11 +37,24 @@ h1#title {
     transform: translateY(0);
   }
 
+  #vol {
+    margin-right: 2rem;
+  }
+
+  div.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: var(--gap-sml);
+    margin-bottom: var(--gap-lrg);
+    align-items: center;
+  }
+
 .body, .bleed-left {
   margin-bottom: var(--gap-lrg);
 }
 
-// ----------------------------
+
 // 640px - nominal grid width +
 // ----------------------------
 @include query($bp-sml){
@@ -65,10 +78,6 @@ h1#title {
     display: grid;
     grid-template-columns: subgrid;
 
-    p, form {
-      grid-column-start: 1;
-    }
-
     p {
       margin: calc(0.25*var(--gap-sml)) 0;
     }
@@ -76,6 +85,14 @@ h1#title {
 
     h1#title {
       margin: 0;
+    }
+
+    div.row {
+      grid-column-start: 1;
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      margin-bottom: var(--gap-sml);
     }
 
   .body {
@@ -86,9 +103,10 @@ h1#title {
     grid-column: span 3 / span 3;
     width: 100%;
   }
-}
 
-// -----------------------------
+} // -------------------------
+
+
 // nominal grid width - 1120px +
 // -----------------------------
 @include query($bp-med){
@@ -101,17 +119,24 @@ h1#title {
     grid-template-columns: minmax(0,1fr) var(--col1) var(--col2) minmax(0,1fr);
   }
 
+    h1#title {
+      white-space: nowrap;
+    }
+
     #title-luckyseagull {
       transform: translateY(calc(-1 * var(--gap-sml)));
     }
 
-    #vol {
-      margin-right: 2rem;
+    div.row {
+      grid-column-start: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3.25rem;
     }
 
-}
+} // -------------------------
 
-// ---------------------------
+
 // 1120px - 1680px +
 // ---------------------------
 @include query($bp-lrg){
@@ -123,18 +148,18 @@ h1#title {
   #title-luckyseagull {
     transform: translateY(0);
   }
-}
+} // -------------------------
 
-// ---------------------------
+
 // 1680px - 2240px +
 // ---------------------------
 @include query($bp-xlg){
   h1#title {
     --multiplier: 1.05;
   }
-}
+} // -------------------------
 
-// ---------------------------
+
 // 2240px ++
 // ---------------------------
 
@@ -146,5 +171,5 @@ h1#title {
   h1#title {
     --multiplier: 1.15;
   }
-}
+} // -------------------------
 
