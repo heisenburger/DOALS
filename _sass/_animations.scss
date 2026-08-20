@@ -1,0 +1,39 @@
+$number-of-currencies: 3;
+$seconds-per-currency: 5s;
+$fade-time: 5%;
+
+.currency-container {
+  --number-of-currencies: #{$number-of-currencies};
+  --seconds-per-currency: #{$seconds-per-currency};
+  display: inline;
+  position: relative;
+  opacity: 0.5;
+}
+
+.currency {
+  position: absolute;
+  width: max-content;
+  opacity: 0;
+  animation: slide calc(var(--number-of-currencies) * var(--seconds-per-currency)) infinite;
+}
+
+@for $i from 1 through $number-of-currencies {
+  .currency:nth-child(#{$i}) { animation-delay: calc((#{$i} - 1) * var(--seconds-per-currency)); }
+}
+
+$partial-percentage: calc(100% / $number-of-currencies);
+$second: calc( $partial-percentage / $seconds-per-currency );
+$crossfade: $partial-percentage + $fade-time;
+
+@keyframes slide {
+  // start invisible
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  // fade in
+  #{$fade-time} { opacity: 1; }
+  // remain visible for 1/number-of-currencies of the time
+  #{$partial-percentage} { opacity: 1; animation-timing-function: ease-out; }
+  // fade out
+  #{$crossfade} { opacity: 0; }
+  // end invisible
+  100% { opacity: 0; }
+}

@@ -5,7 +5,7 @@
   font-size: var(--f-med);
 }
 
-input, button {
+input, button, .button {
   font-family: var(--ff-sans);
   font-size: var(--f-med);
   text-align: center;
@@ -33,6 +33,7 @@ header {
 a#self-link {
   position: relative;
   text-decoration: none;
+  display: inline-block;
   &:hover {
     color: var(--ac);
   }
@@ -50,4 +51,8 @@ a#self-link {
   &:active {
     transform: translate(1px, 1px);
   }
+}
+
+.highlight {
+  background-color: var(--fc);
 }

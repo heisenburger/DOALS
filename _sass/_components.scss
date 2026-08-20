@@ -15,7 +15,7 @@
 // }
 
 @include dark {
-  h1 {
+  .handwriting {
     filter: invert(1) contrast(1);
   }
 }
@@ -28,7 +28,7 @@
   object-position: top;
 }
 
-input, button {
+input, button, .button {
   border-radius: 0;
   background: transparent;
   border: 1px solid var(--fg);
@@ -39,8 +39,10 @@ input {
   padding-left: 1rem;
 }
 
-button {
+button, .button {
   @include wipe-hover;
+  display: inline-block;
+  width: fit-content;
   padding: 0.75rem 1rem;
   &:hover {
     cursor: pointer;
