@@ -41,6 +41,14 @@ header {
     font-style: italic;
     opacity: 0.8;
   }
+
+  .store.secret {
+    filter: blur(0.5rem);
+    &:hover{
+      filter: blur(0.2rem);
+      transition: 1s;
+    }
+  }
 }
 
 a.oval {
