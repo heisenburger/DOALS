@@ -1,6 +1,6 @@
 $number-of-currencies: 3;
-$seconds-per-currency: 5s;
-$fade-time: 5%;
+$seconds-per-currency: 2.5s;
+$fade-time: 10%;
 
 .currency-container {
   --number-of-currencies: #{$number-of-currencies};

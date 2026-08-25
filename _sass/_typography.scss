@@ -20,9 +20,14 @@ p.body {
   text-align: justify;
 }
 
+h2.body {
+  text-align: left;
+  margin: var(--gap-lrg) 0 var(--gap-sml);
+}
+
 header, footer {
   font-weight: bold;
-  letter-spacing: 30%;
+  letter-spacing: 50%;
   text-transform: uppercase;
 }
 
@@ -30,7 +35,15 @@ header {
   font-size: var(--f-xlg);
 }
 
-a#self-link {
+#stockists {
+  .store-type {
+    text-transform: uppercase;
+    font-style: italic;
+    opacity: 0.8;
+  }
+}
+
+a.oval {
   position: relative;
   text-decoration: none;
   display: inline-block;
