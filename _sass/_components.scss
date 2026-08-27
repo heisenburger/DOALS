@@ -3,17 +3,6 @@
 
 // Flipthrough gif
 
-// h1 {
-//   filter: invert(1);
-//   mix-blend-mode: difference;
-// }
-
-// @include dark {
-//   h1#title img{
-//     filter: contrast(2);
-//   }
-// }
-
 @include dark {
   .handwriting {
     filter: invert(1) contrast(1);
@@ -26,6 +15,7 @@
   aspect-ratio: 3/4.5;
   object-fit: cover;
   object-position: top;
+  margin: 0;
 }
 
 input, button, .button {
@@ -45,6 +35,9 @@ button, .button {
   padding: 0.75rem 1rem;
   &:hover {
     cursor: pointer;
+    background-color: var(--fc);
+    // background: linear-gradient(90deg, #FF45F8 0%, #492CDC 25%, #31FF06 50%, #65C2B3 75%, #FF45F8 99.99%);
+    animation: party 800ms linear infinite;
   }
   &:active {
     transform: translate(1px, 2px);
