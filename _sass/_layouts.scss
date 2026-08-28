@@ -58,6 +58,10 @@ h1#title {
     gap: var(--gap-sml);
   }
 
+  section.meta {
+    min-width: 12em;
+  }
+
 .body, .bleed-left {
   margin-bottom: var(--gap-sml);
 }
