@@ -2,8 +2,17 @@
 @use "vars" as *;
 
 header, footer {
-  text-align: center;
   padding: var(--gap-lrg) 0;
+}
+
+header {
+  text-align: center;
+}
+
+footer {
+  text-align: right;
+  grid-column: 3 / span 2;
+  padding-right: var(--gap-lrg);
 }
 
 main {
@@ -48,6 +57,7 @@ h1#title {
     margin: var(--gap-sml);
     margin-bottom: var(--gap-lrg);
     align-items: center;
+    gap: var(--gap-sml);
   }
 
 .body, .bleed-left {
@@ -124,10 +134,6 @@ img.body, img.bleed-left, .button.body {
 // nominal grid width - 1120px +
 // -----------------------------
 @include query($bp-med){
-
-  header {
-    margin: calc(0.25*var(--gap-lrg)) 0;
-  }
 
   main {
     grid-template-columns: minmax(0,1fr) var(--col1) var(--col2) minmax(0,1fr);

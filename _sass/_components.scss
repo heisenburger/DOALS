@@ -44,6 +44,13 @@ button, .button {
   }
 }
 
+a.button {
+  text-decoration: none;
+  &:hover {
+    opacity: 1;
+  }
+}
+
 // Specs list
 li {
   margin: 1em 0;
