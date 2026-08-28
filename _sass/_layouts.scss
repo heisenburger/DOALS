@@ -11,8 +11,6 @@ header {
 
 footer {
   text-align: right;
-  grid-column: 3 / span 2;
-  padding-right: var(--gap-lrg);
 }
 
 main {
@@ -128,6 +126,20 @@ img.body, img.bleed-left, .button.body {
     width: 100%;
   }
 
+  img.centered {
+    grid-column: 2 / span 2;
+    width: 100%;
+
+    // this is somewhat arbitrary here
+    margin-top: var(--gap-lrg);
+  }
+
+  footer {
+    grid-column-start: 3;
+    padding: var(--gap-sml);
+    align-self: end;
+  }
+
 } // -------------------------
 
 
@@ -196,6 +208,10 @@ img.body, img.bleed-left, .button.body {
   h1#title {
     --multiplier: 1.05;
     transform: translateX(calc(-2.5 * var(--gap-sml)));
+  }
+
+  footer {
+    grid-column-start: 4;
   }
 } // -------------------------
 
