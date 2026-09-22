@@ -62,15 +62,15 @@ h1#title {
     min-width: 12em;
   }
 
-.body, .bleed-left {
+.body, .body2, .bleed-left {
   margin-bottom: var(--gap-sml);
 }
 
-img.body, img.bleed-left, .button.body {
+img.body, img.bleed-left, img.centered, .button.body {
   margin: var(--gap-lrg) 0;
 }
 
-#stockists {
+.table {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 0.625rem;
@@ -80,6 +80,13 @@ img.body, img.bleed-left, .button.body {
     display: grid;
     grid-template-columns: subgrid; 
     margin: 0;
+  }
+}
+
+.table.body2 {
+  grid-template-columns: auto auto;
+  & li {
+    grid-column: span 2;
   }
 }
 
@@ -125,6 +132,10 @@ img.body, img.bleed-left, .button.body {
     grid-column-start: 3;
   }
 
+  .body2 {
+    grid-column-start: 2;
+  }
+
   img.bleed-left {
     grid-column: span 3 / span 3;
     width: 100%;
@@ -133,9 +144,6 @@ img.body, img.bleed-left, .button.body {
   img.centered {
     grid-column: 2 / span 2;
     width: 100%;
-
-    // this is somewhat arbitrary here
-    margin-top: var(--gap-lrg);
   }
 
   footer {
@@ -212,6 +220,10 @@ img.body, img.bleed-left, .button.body {
   h1#title {
     --multiplier: 1.05;
     transform: translateX(calc(-2.5 * var(--gap-sml)));
+  }
+
+  section:nth-last-child(-n+2) {
+    margin-bottom: calc(2*var(--gap-lrg));
   }
 
   footer {

@@ -19,9 +19,16 @@ p, li {
 p.body {
   text-align: justify;
 }
+p.listing {
+  margin-top: 0.55em;
+  line-height: 1.5em;
+}
+
+h2, h3 {
+  text-align: left;
+}
 
 h2.body {
-  text-align: left;
   margin: var(--gap-lrg) 0 var(--gap-sml);
 }
 
@@ -35,7 +42,7 @@ header {
   font-size: var(--f-xlg);
 }
 
-#stockists {
+.table {
   .store-type {
     text-transform: uppercase;
     font-style: italic;
@@ -48,6 +55,11 @@ header {
       filter: blur(0.2rem);
       transition: 1s;
     }
+  }
+
+  .store-address {
+    line-height: 1.2em;
+    margin-top: 0.55em;
   }
 }
 

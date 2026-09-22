@@ -4,6 +4,12 @@
 @use "mixins" as *;
 @use "vars" as *;
 
+// Typography
+
+.italic {
+  font-style: italic;
+}
+
 // Lists
 .nls {
   list-style: none;
