@@ -83,10 +83,15 @@ img.body, img.bleed-left, img.centered, .button.body {
   }
 }
 
-.table.body2 {
+.table-2 {
+  display: grid;
   grid-template-columns: auto auto;
+  gap: var(--gap-sml) var(--gap-lrg);
   & li {
+    display: grid;
+    grid-template-columns: subgrid; 
     grid-column: span 2;
+    margin: 0;
   }
 }
 
